@@ -49,8 +49,8 @@ resource "azureopenshift_redhatopenshift_cluster" "cluster" {
     subnet_id = azurerm_subnet.machine_subnet.id
   }
   service_principal {
-    client_id     = azuread_application.cluster.application_id
-    client_secret = azuread_application_password.cluster.value
+    client_id     = var.client_id
+    client_secret = var.client_secret
   }
 
   api_server_profile {
