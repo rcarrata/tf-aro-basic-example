@@ -98,3 +98,11 @@ variable "aro_version" {
   EOF
   default     = "4.11.31"
 }
+
+variable "client_id" {
+  type = string
+}
+
+variable "client_secret" {
+  type = string
+}
